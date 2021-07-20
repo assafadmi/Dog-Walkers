@@ -1,0 +1,248 @@
+<!--this page will show a signup form for a new dog walker-->
+<html>
+	<head>
+        <!--css style sheet-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+        <!--Shortcuts to other pages-->
+		<a id="small_link" href="/logout">LOGOUT</a>
+		<a id="small_link" href="/new_user_main_page">GO BACK</a>
+         <br/>
+         <hr/>
+		<h2 class="important_title">PLEASE FILL IN YOUR DETAILS </h2>
+        <form action="/walker_details_sent" method="post">
+<!--basic informaion-->
+            <table>
+                <tr>
+                    <td>
+						FIRST NAME
+					</td>
+                    <td>
+						<input type="text" name="dog_walker_first_name" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						LAST NAME
+					</td>
+                    <td>
+						<input type="text" name="dog_walker_last_name" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						EMAIL
+					</td>
+                    <td>
+						<input type="email" name="dog_walker_email" class="wider"/>
+					</td>
+                </tr>
+
+                <tr>
+                    <td>
+						SENIORITY
+					</td>
+                    <td>
+						<input type="number" min = '0'name="dog_walker_seniority" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						PHONE NUMBER
+					</td>
+                    <td>
+						<input type="text" name="dog_walker_phone" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <th colspan="2">
+
+                        HOME ADRESS
+                        </th>
+                </tr>
+                <tr>
+                    <td>
+						CITY
+					</td>
+                    <td>
+						<input type="text" name="dog_walker_city" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						STREET NAME
+					</td>
+                    <td>
+						<input type="text" name="dog_walker_street" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						HOUSE NUMBER
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_walker_house_number" class="wider"/>
+					</td>
+                </tr>
+<!--walks prices-->
+                <tr>
+                    <th colspan="2">
+                        PRICES
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+						SMALL DOG PRICE
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_walker_small_price" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						MEDIUM DOG PRICE
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_walker_medium_price" class="wider"/>
+					</td>
+                </tr>
+                <tr>
+                    <td>
+						LARGE DOG PRICE
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_walker_large_price" class="wider"/>
+					</td>
+                </tr>
+            </table>
+<!--Will show the user a table where he will have to mark each day and part of the day whether he is available or not-->
+        </br></br>
+            <table>
+                <th colspan="6">
+						AVAILABILITY TIMES
+                </th>
+                <tr></tr>
+                <th colspan="6">SUNDAY</th>
+                <tr></tr>
+                <td>MORNING</td>                
+                <td><select name="sunday_morning">
+                    <option value="yes">available</option> 
+                    <option value="no">not available</option> </select></td>
+                <td>NOON</td>                
+                <td><select name="sunday_noon">
+                    <option value="yes">available</option> 
+                    <option value="no">not available</option> </select></td>
+                    <td>EVENING</td>                
+                <td><select name="sunday_evening">
+                    <option value="yes">available</option> 
+                    <option value="no">not available</option> </select></td>
+                    <tr></tr>
+
+                    <th colspan="6">MONDAY</th>
+                    <tr></tr>
+                    <td>MORNING</td>                
+                    <td><select name="monday_morning" >
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                    <td>NOON</td>                
+                    <td><select name="nonday_noon">
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                        <td>EVENING</td>                
+                    <td><select name="monday_evening">
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                        <tr></tr>
+
+                    <th colspan="6">TUESDAY</th>
+                    <tr></tr>
+                    <td>MORNING</td>                
+                    <td><select name="tuesday_morning">
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                    <td>NOON</td>                
+                    <td><select name="tuesday_noon">
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                        <td>EVENING</td>                
+                    <td><select name="tuesday_evening">
+                        <option value="yes">available</option> 
+                        <option value="no">not available</option> </select></td>
+                        <tr></tr>
+
+                        <th colspan="6">WEDNESDAY</th>
+                        <tr></tr>
+                        <td>MORNING</td>                
+                        <td><select name="wednesday_morning">
+                            <option value="yes">available</option> 
+                            <option value="no">not available</option> </select></td>
+                        <td>NOON</td>                
+                        <td><select name="wednesday_noon">
+                            <option value="yes">available</option> 
+                            <option value="no">not available</option> </select></td>
+                            <td>EVENING</td>                
+                        <td><select name="wednesday_evening">
+                            <option value="yes">available</option> 
+                            <option value="no">not available</option> </select></td>
+                            <tr></tr>
+                            
+                            <th colspan="6">THURSDAY</th>
+                            <tr></tr>
+                            <td>MORNING</td>                
+                            <td><select name="thursday_morning">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                            <td>NOON</td>                
+                            <td><select name="thursday_noon">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                                <td>EVENING</td>                
+                            <td><select name="thursday_evening">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                                <tr></tr>
+
+                                                          
+                            <th colspan="6">FRIDAY</th>
+                            <tr></tr>
+                            <td>MORNING</td>                
+                            <td><select name="friday_morning">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                            <td>NOON</td>                
+                            <td><select name="friday_noon">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                                <td>EVENING</td>                
+                            <td><select name="friday_evening">
+                                <option value="yes">available</option> 
+                                <option value="no">not available</option> </select></td>
+                                <tr></tr>
+                                                           
+                                <th colspan="6">SATURDAY</th>
+                                <tr></tr>
+                                <td>MORNING</td>                
+                                <td><select name="saturday_morning">
+                                    <option value="yes">available</option> 
+                                    <option value="no">not available</option> </select></td>
+                                <td>NOON</td>                
+                                <td><select name="saturday_noon">
+                                    <option value="yes">available</option> 
+                                    <option value="no">not available</option> </select></td>
+                                    <td>EVENING</td>                
+                                <td><select name="saturday_evening">
+                                    <option value="yes">available</option> 
+                                    <option value="no">not available</option> </select></td>
+                                    <tr></tr>
+      
+                                
+
+<!--submit-->
+                    <tr></tr>
+                    <th colspan="6">
+						<input type="submit" value="Send">  
+					</th>
+            </table>
+        </form>
+	</body>

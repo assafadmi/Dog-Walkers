@@ -1,0 +1,62 @@
+    <!--After a walk request form, if his dog is medium the user will be transferred to this page.
+  This page will show him all the available dog walkers at the time he requested.
+  He will be presented with the relevant information for each walk and also the price for the walk.
+The user will choose the dog walker that suits him and thus the walking request will be completed.-->
+<html>
+	<head>
+                <!--css style sheet-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+    <!--links to other pages-->        
+        <a id="small_link" href="/logout">LOGOUT</a>
+        <a id="small_link" href="/dogs_enroll">DOGS ENROLLMENT</a>
+        <a id="small_link" href='/show_owner_requests'>VIEW MY REQUESTS</a>
+        <a id="small_link" href="/new_walk_request.html">CREATE WALK REQUEST</a>
+        <a id="small_link" href='/exist_dog_owner'>BACK TO MENU</a>
+         <br/>
+         <hr/>
+         <h3>HERE ARE THE AVAILABLE DOG WALKERS IN YOUR CITY ON {{day}} {{part_of_the_day}}.</h3>
+         <h3> CHOOSE YOUR WALKER FOR {{dog.d_name}}</h3>
+		<form action="/walk_request_sent_2" method="post">
+            
+            <table>
+            <!--defualt values for the information the owner already gave.
+                Just a way for us to ensure a continuous flow of information.-->
+                <th colspan="2">DOG NAME:</th>
+                <td><select name=dog.d_id>
+                    <option value="{{dog.d_id}}">{{dog.d_name}}</option></select></td><tr></tr>
+                    <th>TIME:</th>
+                    <td><select name=day>
+                        <option value="{{day}}">{{day}}</option></select></td>
+                        <td><select name=part_of_the_day>
+                            <option value="{{part_of_the_day}}">{{part_of_the_day}}</option></select></td>
+            </table>
+                        <!--relevant walkers information-->
+               <table>
+                    <td></td>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NUMBER</th>
+                    <th>PRICE</th>
+                {% for walker in availablewalkers%}
+                    <tr>
+                    <td>
+                    <input type="radio" name="walker_email" value="{{walker.w_email}}">
+                    </td>
+                    <td>{{walker.w_first_name}}</td>
+                    <td>{{walker.w_last_name}}</td>
+                    <td>{{walker.w_email}}</td>
+                    <td>{{walker.w_phone_number}}</td>
+                    <td>{{walker.w_medium_price}}</td>
+                {% endfor %}
+                <tr>
+                    <th colspan="6">
+						<input type="submit" value="send">  
+					</tr>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

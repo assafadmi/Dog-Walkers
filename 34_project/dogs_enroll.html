@@ -1,0 +1,94 @@
+<!--This page presents a dog registration form. A dog owner will fill out this form when he wants to add a dog to the system.
+  After clicking the submit button it will go back to the dog owner's main page and then 
+  the user can register another dog into the system etc-->.
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+        <a id="small_link" href="/logout">LOGOUT</a>
+        <a id="small_link" href="/new_walk_request.html">CREATE WALK REQUEST</a>
+        <a id="small_link" href='/show_owner_requests'>VIEW MY REQUESTS</a>
+        <a id="small_link" href='/exist_dog_owner'>BACK TO MENU</a>
+         <br/>
+         <hr/>
+		<h3 class="important_title">PLEASR FILL IN YOUR DOG'S DETAILS </h3>
+		<form action="/dog_details_sent" method="post">
+            <table>
+                <tr>
+                    <td>
+						NAME
+					</td>
+                    <td>
+						<input type="text" name="dog_name" class="wider"/>
+					</td>
+                </tr>
+
+                <tr>
+                    <td>
+						ID
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_id" class="wider"/>
+					</td>
+                </tr>
+
+                <tr>
+                    <td>
+						AGE
+					</td>
+                    <td>
+						<input type="number" min="0" name="dog_age" class="wider"/>
+					</td>
+                </tr>
+                
+                <tr>
+                    <td>
+						SEX
+					</td>
+                    <td>
+                        <select name="dog_sex">
+                            <option value="male">male</option> 
+                            <option value="female">female</option> </select>                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+						SIZE
+					</td>
+                    <td>
+                        <select name="dog_size">
+                            <option value="small">SMALL</option> 
+                            <option value="medium">MEDIUM</option> 
+                            <option value="large">LARGE</option> </select>					</td>
+                </tr>
+
+                <tr>
+                    <td>
+						FRIENDLY
+					</td>
+                    <td>
+                        <select name="dog_friendly">
+                            <option value="yes">YES</option> 
+                            <option value="no">NO</option> </select>						</td>
+                </tr>
+                <tr>
+                    <td>
+						IMMUNIZED
+					</td>
+                    <td>
+                        <select name="dog_immunized">
+                            <option value="yes">YES</option> 
+                            <option value="no">NO</option> </select>						</td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+						<input type="submit" value="Send"/>  
+					</th>
+
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

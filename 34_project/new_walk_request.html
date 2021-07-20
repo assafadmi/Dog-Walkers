@@ -1,0 +1,59 @@
+<!--Using this page the user selects the day of the week and the part of the day 
+    he wants to schedule a walk for one of his dogs-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+        <a id="small_link" href="/logout">LOGOUT</a>
+        <a id="small_link" href="/dogs_enroll">DOGS ENROLLMENT</a>
+        <a id="small_link" href='/show_owner_requests'>VIEW MY REQUESTS</a>
+        <a id="small_link" href='/exist_dog_owner'>BACK TO MENU</a>
+         <br/>
+         <hr/>
+		<h3>CHOOSE A TIME IN THE WEEK AND ONE OF YOUR DOGS </h3>
+		<form action="/walk_request_sent_1" method="post">
+            <table>
+                <tr>
+                    <td>
+						DAY
+					</td>              
+                    <td><select name="day">
+                        <option value="sunday">SUNDAY</option> 
+                        <option value="monday">MONDAY</option> 
+                        <option value="tuesday">TUESDAY</option> 
+                        <option value="wednesday">WEDNESDAY</option> 
+                        <option value="thursday">THURSDAY</option> 
+                        <option value="friday">FRIDAY</option> 
+                        <option value="saturday">SATURDAY</option> 
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+						PART OF THE DAY
+					</td>              
+                    <td><select name="part_of_the_day">
+                        <option value="morning">MORNING</option> 
+                        <option value="noon">NOON</option> 
+                        <option value="evening">EVENING</option> 
+                </select></td>
+            </tr>
+            <tr>
+                <!--show all the dogs for a specific owner, and set a select option-->
+                <td>
+                    YOUR DOGS
+                    <td><select name="dog_id">
+                        {% for dog in dogs_list%}
+                        <option value="{{dog.d_id}}">{{dog.d_name}}</option> 
+                        {% endfor %}
+                </td>
+            </tr>
+                <tr>
+                    <th colspan="2">
+						<input type="submit" value="Send"/>  
+					</th>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

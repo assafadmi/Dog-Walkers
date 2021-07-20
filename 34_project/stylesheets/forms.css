@@ -1,0 +1,116 @@
+/*css style sheet*/
+/*set the background for every page*/
+body{ 
+    background-image:url("LOGO.jpeg"); 
+        background-repeat: no-repeat;
+    background-size:cover;
+    }
+
+#homepage{ 
+    background-image:url("homepage.jpeg"); 
+        background-repeat: no-repeat;
+    background-size:cover;
+    }
+#byby{ 
+    background-image:url("LOGOUTPIC.jpeg"); 
+        background-repeat: no-repeat;
+    background-size:cover;
+    }
+
+
+/*set some headers with a specific font and color etc*/
+h1{
+    text-align: center;
+    font-size: 1.5cm;
+    color:white;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+h2{
+    text-align: left;
+    font-size: 1cm;
+    color:white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h3{
+    text-align: left;
+    font-size: 0.6cm;
+    color:white;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h4{
+    text-align: left;
+    font-size: 0.5cm;
+    color:white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*set the links style*/
+a{
+    color: black;
+    font-size: larger;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#small_link{
+    color: black;
+    font-size: large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+#big_link{
+    color: black;
+    font-size: x-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+
+#white_link{
+    color: antiquewhite;
+    font-size: x-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+}
+
+/*set some fonts and styling for text*/
+
+#s_div{
+    color: rgb(252, 252, 252);
+    font-size: large ;
+    font-family: Impact;
+}
+#p_div{
+    text-align: left;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#t_div{
+    text-align: left;
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#hp_text{
+    color: black;
+    font-size: large ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*set the table styling*/
+table, th, td {
+    border : 1px solid black;
+    border-collapse:collapse ;
+    background-color: #d0dddd98;
+  }

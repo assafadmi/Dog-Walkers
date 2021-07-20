@@ -1,0 +1,44 @@
+<!--This page shows the walker all the walk requests he got.-->
+
+<html>
+	<head>
+        <!--css style sheet-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+        <!--Shortcuts to other pages-->
+        <a id="small_link" href="/logout">LOGOUT</a>
+        <a id="small_link" href="/show_walker_schedule">VIEW MY WALKS SCHEDULE</a>
+        <a id="small_link" href='/exist_dog_walker'>BACK TO MENU</a>
+         <br/>
+         <hr/>
+		<h2>HERE ARE YOUR WALK REQUESTS</h2>
+		<form action="/update_walk_requests_status" method="post">
+               <table>
+                    <th colspan="2">WHEN</th>
+                    <th>DOG ID</th>
+                    <th>REQUEST DATE</th>
+                    <th>YOUR RESPONSE</th>
+                    <tr>
+            <!--iterate for every walk and show the information about each walk.-->
+                    {% for walk_request in walker_walk_requests%}
+                    <td>{{walk_request.day}}</td>
+                    <td>{{walk_request.part_of_the_day}}</td>
+                    <td>{{walk_request.dog_id}}</td>
+                    <td>{{walk_request.walk_request_date}}</td>
+                    <!--set the walker response for each walk.-->
+                    <td><select name="{{walk_request.number}}">
+                        <option value="yes">APPROVE</option> 
+                        <option value="no">DECLINE</option> 
+                        <option value="waiting">RESPOND LATER</option> 
+                        <tr></tr>
+                </select></td>
+                {% endfor %}
+                    <th colspan="5">
+                        <input type="submit" value="send">  
+					</td> 
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

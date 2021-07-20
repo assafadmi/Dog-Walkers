@@ -1,0 +1,48 @@
+<!--This page shows the owner all the walk requests he has created for his dogs, 
+    Through this page the user will be able to cancel a walk he has previously requested  .-->
+    <html>
+        <head>
+            <!--css style sheet-->
+            <link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+        </head>
+        <body>
+                <!--Shortcuts to other pages-->
+            <a id="small_link" href="/logout">LOGOUT</a>
+            <a id="small_link" href="/dogs_enroll">DOGS ENROLLMENT</a>
+            <a id="small_link" href='/new_walk_request'>CREATE NEW WALK REQUEST</a>
+            <a id="small_link" href='/exist_dog_owner'>BACK TO MENU</a>
+             <br/>
+             <hr/>
+            <h2>HERE ARE YOUR WALK REQUESTS</h2>
+            <form action="/cancel_walk_request" method="post">
+                   <table>
+                       <th>WALK REQUEST NUMBER</th>
+                       <th>DOG ID</th>
+    
+                        <th colspan="2">WHEN</th> 
+                        <th>STATUS</th>
+                        <th>CANCEL</th>
+                        <tr>
+                        {% for walk_request in owner_requests %}
+                        <td>{{walk_request.number}}</td>
+                        <td>{{walk_request.dog_id}}</td>
+                        <td>{{walk_request.day}}</td>
+                        <td>{{walk_request.part_of_the_day}}</td>
+                        <td>{{walk_request.status}}</td>
+                        <td>{% if walk_request.status == "approved" or walk_request.status == "waiting" %}
+                        <select name="{{walk_request.number}}">
+                            <option value="no">KEEP</option> 
+                            <option value="yes">CANCEL</option> </select>
+                            {% endif %}
+                        </td>
+                            <tr></tr>
+                    </select></td>
+                    {% endfor %}
+                        <th colspan="6">
+                            <input type="submit" value="send">  
+                        </td> 
+                    </tr>
+                </table>
+            </form>
+        </body>
+    </html>

@@ -1,0 +1,78 @@
+<!--this page will show a signup form for a new dog owner user-->
+
+<html>
+	<head>
+		<!--css style sheet-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+		<!--Shortcuts to other pages-->
+		<a id="small_link" href="/logout">LOGOUT</a>
+		<a id="small_link" href="/new_user_main_page">GO BACK</a></br><hr/>
+		<h2>PLEASE FILL IN YOUR DETAILS  </h2>
+		<form action="/owner_details_sent" method="post">
+			<!--basic informaion-->
+            <table>
+                <tr>
+                    <td>
+						email
+					</td>
+                    <td>
+						<input type="email" name="owner_email" class="wider"/>
+					</td>
+                </tr>
+				
+                <tr>
+                    <td>
+						first name
+					</td>
+                    <td>
+						<input type="text" name="owner_first_name" class="wider"/>
+					</td>
+                </tr>
+                
+                <tr>
+                    <td>
+						last name
+					</td>
+                    <td>
+						<input type="text" name="owner_last_name" class="wider"/>
+					</td>
+                </tr>
+
+				<tr>
+                    <td>
+						phone number
+					</td>
+                    <td>
+						<input type="text" name="owner_phone_number" class="wider"/>
+					</td>
+				</tr>
+				
+                <tr>
+                    <td>
+						city
+					</td>
+                    <td>
+						<input type="text" name="owner_city" class="wider"/>
+					</td>
+                </tr>
+
+                <tr>
+                    <td>
+						date of birth
+					</td>
+                    <td>
+						<input type="date" name="owner_date_of_birth" class="wider"/>
+					</td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+						<input type="submit" value="Send"/>  
+					</th>
+                </tr>
+            </table>
+        </form>
+	</body>
+</html>

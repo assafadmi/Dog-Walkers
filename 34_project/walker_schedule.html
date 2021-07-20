@@ -1,0 +1,75 @@
+<!--This page shows the user his weekly schedule.-->
+<html>
+	<head>
+        <!--css style sheet-->
+		<link rel="stylesheet" type="text/css" href="stylesheets/forms.css">
+	</head>
+	<body>
+             <!--Shortcuts to other pages-->
+        <a id="small_link" href="/logout">LOGOUT</a>
+        <a id="small_link" href="/show_walk_requests">VIEW MY WALK REQUESTS</a>
+        <a id="small_link" href='/exist_dog_walker'>BACK TO MENU</a>
+         <br/>
+         <hr/>
+        <h2>HERE IS YOUR SCHEDULE</h2>
+        <!--iterate for every day in he week, and show the appropriate information for each day.-->
+        {% for day in days %}
+        <div id = "t_div">{{day}}</div>
+        <!--morning walk-->
+        <div id = "p_div">MORNING</div>
+               <table> <th>DOG NAME</th>
+                        <th>DOG ID</th>
+                        <th>DOG OWNER NAME</th>
+                        <th>DOG OWNER EMAIL</th>
+                    <tr></tr>
+                        <tr></tr>
+
+                        {% for walk in walker_approved_walks %}
+                        {% if walk.day == day and walk.part_of_the_day == 'morning' %}
+
+                        <td>{{walk.dog_name}}</td>
+                        <td>{{walk.dog_id}}</td>
+                        <td>{{walk.owner_first_name}} {{walk.owner_last_name}}</td>
+                        <td>{{walk.owner_email}}</td>
+                        <tr></tr>
+                        {% endif %}{% endfor %}</table>
+            <!--noon walk-->
+            <div id = "p_div">NOON</div>
+               <table> <th>DOG NAME</th>
+                        <th>DOG ID</th>
+                        <th>DOG OWNER NAME</th>
+                        <th>DOG OWNER EMAIL</th>
+                    <tr></tr>
+                        <tr></tr>
+
+                        {% for walk in walker_approved_walks %}
+                        {% if walk.day == day and walk.part_of_the_day == 'noon' %}
+
+                        <td>{{walk.dog_name}}</td>
+                        <td>{{walk.dog_id}}</td>
+                        <td>{{walk.owner_first_name}} {{walk.owner_last_name}}</td>
+                        <td>{{walk.owner_email}}</td>
+                        <tr></tr>
+                        {% endif %}{% endfor %}</table>
+        <!--evning walk-->
+        <div id = "p_div">EVENING</div>
+               <table> <th>DOG NAME</th>
+                        <th>DOG ID</th>
+                        <th>DOG OWNER NAME</th>
+                        <th>DOG OWNER EMAIL</th>
+                    <tr></tr>
+                        <tr></tr>
+
+                        {% for walk in walker_approved_walks %}
+                        {% if walk.day == day and walk.part_of_the_day == 'evening' %}
+
+                        <td>{{walk.dog_name}}</td>
+                        <td>{{walk.dog_id}}</td>
+                        <td>{{walk.owner_first_name}} {{walk.owner_last_name}}</td>
+                        <td>{{walk.owner_email}}</td>
+                        <tr></tr>
+                        {% endif %}{% endfor %}</table>
+<br/>
+<!--end the for loop-->
+                        {% endfor %}
+               </body></html>
